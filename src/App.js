@@ -17,6 +17,7 @@ class App extends Component {
     this.state = { isPokemonFavoriteById: this.setIsPokemonFavoriteById() };
   }
 
+
   onUpdateFavoritePokemons(pokemonId, isFavorite) {
     updateFavoritePokemons(pokemonId, isFavorite);
 
