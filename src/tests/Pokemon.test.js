@@ -21,7 +21,7 @@ describe('Teste o componente <Pokemon.js />', () => {
     const imgFavorita = screen.getByAltText(/pikachu is marked as favorite/i);
     expect(imgFavorita.src).toContain('/star-icon.svg');
   });
-  it('A imagem do pokémon deve ser exibida. Ela deve conter um atributo src com a URL da imagem e um atributo alt com o texto <name> sprite, onde <name> é o nome do pokémon.', () => {
+  it('A imagem do pokémon deve ser exibida.', () => {
     renderWithRouter(<App />);
     const pikachuImg = screen.getByAltText(/pikachu sprite/i);
     expect(pikachuImg.src).toContain('https://cdn2.bulbagarden.net/upload/b/b2/Spr_5b_025_m.png');

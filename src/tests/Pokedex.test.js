@@ -4,14 +4,14 @@ import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
-/* eslint max-len: ["error", { "ignoreStrings": true }] */
 describe('Teste o componente <Pokedex.js />', () => {
   it('Teste se a página contém um heading h2 com o texto Encountered pokémons', () => {
     renderWithRouter(<App />);
-    const title = screen.getByRole('heading', { name: /Encountered pokémons/i, level: 2 });
+    const title = screen
+      .getByRole('heading', { name: /Encountered pokémons/i, level: 2 });
     expect(title).toBeInTheDocument();
   });
-  it('Teste se é exibido o próximo pokémon da lista quando o botão Próximo pokémon é clicado', () => {
+  it('Teste se é exibido o próximo pokémon da lista', () => {
     renderWithRouter(<App />);
     const btn = screen.getByRole('button', { name: /Próximo pokémon/i });
     const namePokemon = screen.getByTestId('pokemon-name');
